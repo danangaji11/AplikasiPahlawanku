@@ -16,11 +16,11 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class AdapterCard  extends RecyclerView.Adapter<AdapterCard.ClassViewHolder> {
+public class AdapterGrid  extends RecyclerView.Adapter<AdapterGrid.ClassViewHolder> {
     private ArrayList<ModelPahlawan> dataPahlawan;
     private Context ctx;
 
-    public AdapterCard(ArrayList<ModelPahlawan> dataPahlawan, Context ctx) {
+    public AdapterGrid(ArrayList<ModelPahlawan> dataPahlawan, Context ctx) {
         this.dataPahlawan = dataPahlawan;
         this.ctx = ctx;
     }
@@ -28,21 +28,18 @@ public class AdapterCard  extends RecyclerView.Adapter<AdapterCard.ClassViewHold
     @NonNull
     @Override
     public ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View varview = LayoutInflater.from(ctx).inflate(R.layout.item_card,parent,false);
-
+        View varview = LayoutInflater.from(ctx).inflate(R.layout.item_grid,parent,false);
         return new ClassViewHolder(varview);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ClassViewHolder holder, int position) {
         ModelPahlawan pahlawan = dataPahlawan.get(position);
-        holder.tvnama.setText(pahlawan.getNama());
-        holder.tvTentang.setText(pahlawan.getTentang());
         Glide
                 .with(ctx)
                 .load(pahlawan.getFoto())
                 .centerCrop()
-                .into(holder.ivfoto);
+                .into(holder.ivGrid);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,14 +68,11 @@ public class AdapterCard  extends RecyclerView.Adapter<AdapterCard.ClassViewHold
     }
 
     public class ClassViewHolder extends RecyclerView.ViewHolder    {
-        ImageView ivfoto;
-        TextView tvnama, tvTentang;
+        ImageView ivGrid;
 
         public ClassViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivfoto = itemView.findViewById(R.id.iv_foto);
-            tvnama = itemView.findViewById(R.id.tv_nama);
-            tvTentang = itemView.findViewById(R.id.tv_tentang);
- }
+            ivGrid = itemView.findViewById(R.id.iv_grid);
+        }
     }
 }

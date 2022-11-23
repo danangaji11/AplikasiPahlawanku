@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Aplikasi bergerak 1/AplikasiPahlawanku/app/src/main/res/layout/activity_detail.xml" value="0.24635416666666668" />
         <entry key="..\:/Aplikasi bergerak 1/AplikasiPahlawanku/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Aplikasi bergerak 1/AplikasiPahlawanku/app/src/main/res/layout/item_card.xml" value="0.24895833333333334" />
+        <entry key="..\:/Aplikasi bergerak 1/AplikasiPahlawanku/app/src/main/res/layout/item_grid.xml" value="0.24635416666666668" />
+        <entry key="..\:/Aplikasi bergerak 1/AplikasiPahlawanku/app/src/main/res/menu/menu_mode.xml" value="0.24635416666666668" />
       </map>
     </option>
   </component>
